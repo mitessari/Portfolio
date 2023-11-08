@@ -1,13 +1,25 @@
+.navbar {
+  background-color: #000;
+}
+
 .ftco-navbar-light .navbar-brand {
   color: #fff;
   padding-top: 0.7rem;
   padding-bottom: 0.7rem;
 }
 
-.navbar-brand {
-  font-weight: 900;
-  font-size: 24px;
-  text-transform: uppercase;
+.module.local_nav_bar {
+  padding: 50px;
+  background-color: #000;
+}
+
+.local-nav-logo {
+  font-family: "Star Wars", sans-serif;
+  width: 60vh;
+  text-align: center;
+  margin: auto;
+  font-size: 3rem;
+  color: white;
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
@@ -26,11 +38,13 @@
   display: block;
   width: 0px;
   height: 2px;
-  background: #fec400;
-  transition: 0.4s;
+  background: #fff;
+  box-shadow: 0px 0px 4px 1px #fade4b;
+  transition: all 0.25s;
 }
 
 .nav-item:hover::after {
+  box-sizing: border-box;
   width: 100%;
 }
 
@@ -40,10 +54,17 @@
 .ftco_navbar .navbar-nav .show > .nav-link,
 .ftco_navbar .navbar-nav .nav-link:focus,
 .ftco_navbar .navbar-nav .nav-link:hover {
-  color: #fec400;
+  color: #fff;
 }
 
 .nav-link {
   padding: 25px 5px;
   transition: 0.2s;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin: auto;
 }
