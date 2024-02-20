@@ -1,42 +1,4 @@
 
-var slideIndex = 1;
-showSlides(slideIndex);
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-}
-
-var slideIndexAutomatic = 0;
-showSlidesAutomatically();
-function showSlidesAutomatically() {
-    var i;
-   var slides = document.getElementsByClassName("mySlides");
-   for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";
-   }
-   slideIndexAutomatic++;
-   if (slideIndexAutomatic > slides.length) { slideIndexAutomatic = 1 }
-   slides[slideIndexAutomatic - 1].style.display = "block";
-   setTimeout(showSlidesAutomatically, 2000); // Change image every 2 seconds
-}
-
 const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
 const firstCardWidth = carousel.querySelector(".card").offsetWidth;
@@ -108,3 +70,29 @@ document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
+
+
+
+function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+    for (var i = 0; i < reveals.length; i++) {
+      var windowHeight = window.innerHeight;
+      var elementTop = reveals[i].getBoundingClientRect().top;
+      var elementVisible = 150;
+      if (elementTop < windowHeight - elementVisible) {
+        reveals[i].classList.add("active");
+      } else {
+        reveals[i].classList.remove("active");
+      }
+    }
+  }
+
+window.addEventListener("scroll", reveal);
+
+// To check the scroll position on page load
+reveal();
+
+
+
+
+

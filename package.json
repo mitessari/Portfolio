@@ -1,5 +1,7 @@
 {
   "dependencies": {
-    "swiper": "^11.0.5"
+    "gsap": "^3.12.5",
+    "swiper": "^11.0.5",
+    "type": "module"
   }
 }
