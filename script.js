@@ -1,4 +1,10 @@
 
+const container = document.querySelector(".container");
+const hamburger = document.querySelector(".hamburger");
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    container.classList.toggle("active");
+});
 const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
 const firstCardWidth = carousel.querySelector(".card").offsetWidth;
