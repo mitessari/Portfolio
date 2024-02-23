@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <title>Milena Portifolio</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/style2.css">
@@ -50,7 +50,7 @@
             </ul>
         </div>
        
-            <div class="collapse navbar-collapse">
+            <div class="collapse navbar-collapse" id="mylinks">
                 <ul class="navbar-nav nav ml-auto">
                     <li class="nav-item">
                         <a href="#" class="nav-link">
@@ -84,11 +84,11 @@
                     </li>
                 </ul>
             </div>
+            <a href="javascript:void(0);" class="hamburger-icon" onclick="myFunction()">
+          <i class="fa fa-bars" style="font-size:20px"></i>
+        </a>
         </div>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+        
       </div>
       
     </nav>
@@ -129,7 +129,6 @@
     </div>
     <div class="about-text">
         <h2>Get To Know Me!</h2>
-        <br>
         <p>Hi, I'm Milena, an enthusiastic Front End Web Developer using <span style="font-weight: bold;">JavaScript (React, Angular)</span>, with a passion for design using <span style="font-weight:bold;">CSS, SCSS</span> and <span style="font-weight:bold;" >Figma</span>. I am currently learning SQL and Express.js.
 
             In my last project I participated creating an webpage for an NGO that allows people to look for dogs for adoption and gives the NGO more visibility . The website was built with <span style="font-weight:bold;">Node.JS</span>, <span style="font-weight:bold;">React</span> and <span style="font-weight:bold;">Tailwind</span>.

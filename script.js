@@ -1,10 +1,4 @@
 
-const container = document.querySelector(".container");
-const hamburger = document.querySelector(".hamburger");
-hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("active");
-    container.classList.toggle("active");
-});
 const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
 const firstCardWidth = carousel.querySelector(".card").offsetWidth;
@@ -97,6 +91,15 @@ window.addEventListener("scroll", reveal);
 
 // To check the scroll position on page load
 reveal();
+
+function myFunction() {
+    var x = document.getElementById("mylinks");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+  }
 
 
 
