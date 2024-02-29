@@ -101,6 +101,26 @@ function myFunction() {
     }
   }
 
+  let loginForm = document.getElementById("loginForm");
+  loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let name = document.getElementsByName("name")[0].value;
+    let email = document.getElementsByName("email")[0].value;
+    let message = document.getElementsByName("message")[0].value;
+    if(name === "" || email === "" || message === "") {
+      alert("Ensure you input a value in both fields!");
+    } else {
+      alert("This form has been successfully submitted!");
+      console.log(
+        `This form has a name of ${name} and a email ${email} and a message ${message}`
+      );
+      document.getElementsByName("name")[0].value = "";
+      document.getElementsByName("email")[0].value = "";
+      document.getElementsByName("message")[0].value = "";
+    }
+  });
+
+
 
 
 
